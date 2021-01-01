@@ -13,7 +13,7 @@ import Profile from './components/Profile';
 import SideNavigation from './components/SideNavigation';
 import InboxBody from './components/InboxBody';
 
-import './index.scss';
+import './index.css';
 
 const composeEnhancers =
   typeof window === 'object' &&

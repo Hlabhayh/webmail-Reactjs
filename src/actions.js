@@ -3,6 +3,7 @@ import { getProfile, getMails } from "./api";
 export const LOAD_PROFILE_BIGIN = 'LOAD_PROFILE_BIGIN';
 export const LOAD_PROFILE_SUCCESS = 'LOAD_PROFILE_SUCCESS';
 export const LOAD_PROFILE_ERROR = 'LOAD_PROFILE_ERROR';
+
 export const LOAD_MAILS_BIGIN = 'LOAD_MAILS_BIGIN';
 export const LOAD_MAILS_SUCCESS = 'LOAD_MAILS_SUCCESS';
 export const LOAD_MAILS_ERROR = 'LOAD_MAILS_ERROR';
