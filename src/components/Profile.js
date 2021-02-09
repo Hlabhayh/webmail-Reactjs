@@ -2,15 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import '../index.css';
 
-const Profile = ({
-  profile,
-  loading,
-  error
-}) => {
+const Profile = ({ profile, loading, error }) => {
   if (loading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   } else if (error) {
-    return console.error(error)
+    console.error(error);
+    return <div>Error loading !</div>;
   } else {
     return (
       <div key={profile.id} className="user-head">
@@ -19,22 +16,20 @@ const Profile = ({
         </a>
         <div className="user-name">
           <h5>
-            <a href="##" >{profile.firstName} {profile.lastName}</a>
+            {profile.firstName} {profile.lastName}
           </h5>
-          <span>
-            <a href="##">{profile.email}</a>
-          </span>
+          <span>{profile.email}</span>
         </div>
-        <a className="mail-dropdown pull-right" href="##">
+        <span className="mail-dropdown pull-right">
           <i className="fa fa-chevron-down"></i>
-        </a>
+        </span>
       </div>
-    )
+    );
   }
-}
-const mapState = state => ({
-  profile: state.profile,
-  loading: state.profileLoading,
-  error: state.error,
-})
+};
+const mapState = (state) => ({
+  profile: state.getProfile.profile,
+  loading: state.getProfile.profileLoading,
+  error: state.getProfile.error,
+});
 export default connect(mapState)(Profile);

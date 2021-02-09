@@ -1,5 +1,6 @@
+import React from 'react';
 
-const SideNavigation = () => {
+function SideNavigation({ onChangeSection, sections }) {
   return (
     <div>
       <div className="inbox-body">
@@ -10,7 +11,9 @@ const SideNavigation = () => {
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <button aria-hidden="true" data-dismiss="modal" className="close" type="button">×</button>
+                <button aria-hidden="true" data-dismiss="modal" className="close" type="button">
+                  ×
+                </button>
                 <h4 className="modal-title">Compose</h4>
               </div>
               <div className="modal-body">
@@ -47,7 +50,9 @@ const SideNavigation = () => {
                         <span>Attachment</span>
                         <input type="file" name="files[]" multiple="" />
                       </span>
-                      <button className="btn btn-send" type="submit">Send</button>
+                      <button className="btn btn-send" type="submit">
+                        Send
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -56,51 +61,38 @@ const SideNavigation = () => {
           </div>
         </div>
       </div>
+
       <ul className="inbox-nav inbox-divider">
-        <li className="active">
-          <a href="##"><i className="fa fa-inbox"></i> Inbox <span className="label label-danger pull-right">2</span></a>
-        </li>
-        <li>
-          <a href="##"><i className="fa fa-envelope-o"></i> Sent Mail</a>
-        </li>
-        <li>
-          <a href="##"><i className="fa fa-bookmark-o"></i> Important</a>
-        </li>
-        <li>
-          <a href="##"><i className=" fa fa-external-link"></i> Drafts <span className="label label-info pull-right">30</span></a>
-        </li>
-        <li>
-          <a href="##"><i className=" fa fa-trash-o"></i> Trash</a>
-        </li>
+        {sections.map((sec) => (
+          <li key={sec.key} className={sec.active ? 'active' : 'inactive'}>
+            <a href="##" onClick={() => onChangeSection(sec.key)}>
+              <i className={sec.icon}></i>
+              {sec.label}
+              <span className={sec.color}> {sec.total} </span>
+            </a>
+          </li>
+        ))}
       </ul>
-      <ul className="nav nav-pills nav-stacked labels-info inbox-divider">
-        <li> <h4>Labels</h4> </li>
-        <li> <a href="##"> <i className=" fa fa-sign-blank text-danger"></i> Work </a> </li>
-        <li> <a href="##"> <i className=" fa fa-sign-blank text-success"></i> Design </a> </li>
-        <li> <a href="##"> <i className=" fa fa-sign-blank text-info "></i> Family </a>
-        </li><li> <a href="##"> <i className=" fa fa-sign-blank text-warning "></i> Friends </a>
-        </li><li> <a href="##"> <i className=" fa fa-sign-blank text-primary "></i> Office </a>
-        </li>
-      </ul>
+
       <div className="inbox-body text-center">
         <div className="btn-group">
-          <a className="btn mini btn-primary" href="##">
+          <span className="btn mini btn-primary">
             <i className="fa fa-plus"></i>
-          </a>
+          </span>
         </div>
         <div className="btn-group">
-          <a className="btn mini btn-success" href="##">
+          <span className="btn mini btn-success">
             <i className="fa fa-phone"></i>
-          </a>
+          </span>
         </div>
         <div className="btn-group">
-          <a className="btn mini btn-info" href="##">
+          <span className="btn mini btn-info">
             <i className="fa fa-cog"></i>
-          </a>
+          </span>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default SideNavigation;
