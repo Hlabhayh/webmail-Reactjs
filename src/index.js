@@ -1,17 +1,58 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+
+import reducer from './reducer';
+
+import { loadProfile, loadMails } from './actions';
+
+import Profile from './components/Profile';
+import SideNavigation from './components/SideNavigation';
+import InboxBody from './components/InboxBody';
+
+import './index.scss';
+
+const composeEnhancers =
+  typeof window === 'object' &&
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?   
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+      trace :true
+    }) : compose;
+
+const enhancer = composeEnhancers(
+  applyMiddleware(thunk),
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const store = createStore(
+  reducer,
+  enhancer
+);
+
+store.dispatch(loadProfile());
+store.dispatch(loadMails());
+
+const App = () =>
+  <div className="container" id="app">
+    <div className="mail-box">
+      <aside className="sm-side">
+        <Profile />
+        <SideNavigation />
+      </aside>
+      <aside className="lg-side">
+        <InboxBody />
+      </aside>
+    </div>
+  </div>;
+
+
+ReactDOM.render(
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
+  document.getElementById('root')
+);
