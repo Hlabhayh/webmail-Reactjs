@@ -4,7 +4,7 @@ import Paginator from './paginator';
 import '../index.css';
 
 const InboxBody = ({ loading, error, mails, section }) => {
-  const [mailsPerPage] = useState(17)
+  const [mailsPerPage] = useState(17);
   const [pagination, setPagination] = useState({
     from: 0,
     to: 17,
@@ -135,7 +135,7 @@ const InboxBody = ({ loading, error, mails, section }) => {
           </div>
           {filteredMails
             .sort((a, b) => (a.sentAt < b.sentAt ? 1 : -1))
-            .slice(pagination.from , pagination.to)
+            .slice(pagination.from, pagination.to)
             .map((mail) => (
               <table key={mail.id} className={mail.readAt ? 'table table-inbox table-hover read' : 'table table-inbox table-hover unread'}>
                 <tbody>

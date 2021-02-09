@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
-import { getMails, getProfile } from './store/reducers/getMails';
+import { getMails, getProfile } from './store/reducers/reducers';
 
 import { loadProfile, loadMails } from './store/actions/actions';
 
