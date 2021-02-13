@@ -32,7 +32,7 @@
       "attachment": null,
       "sentAt": "2020-08-06T04:40:22 -02:00",
       "readAt": "2018-07-26T10:38:38 -02:00",
-      "deletedAt": "2020-11-20T16:58:30.735Z"
+      "deletedAt": null
     },
     {
       "id": 3,
@@ -82,7 +82,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2019-07-02T11:39:07 -02:00",
-      "readAt": "2020-12-12T15:48:14.990Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -100,7 +100,7 @@
       "attachment": null,
       "sentAt": "2020-07-08T07:08:34 -02:00",
       "readAt": "2019-10-15T05:21:43 -02:00",
-      "deletedAt": "2020-11-20T16:58:30.735Z"
+      "deletedAt": null
     },
     {
       "id": 7,
@@ -252,7 +252,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-05-29T01:52:19 -02:00",
-      "readAt": "2020-12-12T15:48:15.029Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -286,7 +286,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2019-06-09T12:45:36 -02:00",
-      "readAt": "2020-12-12T15:48:14.991Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -303,7 +303,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2017-10-27T07:36:07 -02:00",
-      "readAt": "2020-12-12T15:48:15.002Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -405,7 +405,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-02-02T07:05:38 -01:00",
-      "readAt": "2020-12-12T15:48:15.012Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -456,7 +456,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2018-03-09T02:46:37 -01:00",
-      "readAt": "2020-12-12T15:48:14.998Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -507,7 +507,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2019-03-23T07:05:26 -01:00",
-      "readAt": "2020-12-12T15:48:14.992Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -524,7 +524,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-10-13T10:29:27 -02:00",
-      "readAt": "2020-12-12T15:48:15.016Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -576,7 +576,7 @@
       "attachment": null,
       "sentAt": "2020-07-14T01:15:47 -02:00",
       "readAt": "2019-08-10T04:45:29 -02:00",
-      "deletedAt": "2020-12-12T15:49:01.139Z"
+      "deletedAt": null
     },
     {
       "id": 35,
@@ -660,7 +660,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2016-11-02T04:32:56 -01:00",
-      "readAt": "2020-12-12T15:48:15.007Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -677,7 +677,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2015-02-15T12:43:49 -01:00",
-      "readAt": "2020-12-12T15:48:15.022Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -694,7 +694,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2016-09-07T03:04:08 -02:00",
-      "readAt": "2020-12-12T15:48:15.008Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -762,7 +762,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-01-31T03:17:48 -01:00",
-      "readAt": "2020-12-12T15:48:15.013Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -898,7 +898,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2015-08-17T03:29:49 -02:00",
-      "readAt": "2020-12-12T15:48:15.019Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -915,7 +915,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-05-20T07:57:16 -02:00",
-      "readAt": "2020-12-12T15:48:15.010Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -1085,7 +1085,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-05-02T02:16:20 -02:00",
-      "readAt": "2020-12-12T15:48:15.030Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -1188,7 +1188,7 @@
       "attachment": null,
       "sentAt": "2020-09-09T09:37:35 -02:00",
       "readAt": "2018-11-04T12:12:20 -01:00",
-      "deletedAt": "2020-11-21T03:16:52.076Z"
+      "deletedAt": null
     },
     {
       "id": 71,
@@ -1323,7 +1323,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2015-12-28T04:46:51 -01:00",
-      "readAt": "2020-12-12T15:48:15.014Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -1544,7 +1544,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2019-05-06T10:34:34 -02:00",
-      "readAt": "2020-12-12T15:48:14.992Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -1579,7 +1579,7 @@
       "attachment": null,
       "sentAt": "2020-09-04T10:55:49 -02:00",
       "readAt": null,
-      "deletedAt": "2020-11-20T16:58:30.735Z"
+      "deletedAt": null
     },
     {
       "id": 94,
@@ -1612,7 +1612,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2016-11-22T04:07:33 -01:00",
-      "readAt": "2020-12-12T15:48:15.007Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -1748,7 +1748,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2017-08-05T11:39:24 -02:00",
-      "readAt": "2020-12-12T15:48:15.003Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -1816,7 +1816,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2017-08-15T01:06:01 -02:00",
-      "readAt": "2020-12-12T15:48:15.003Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -1884,7 +1884,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2016-09-12T01:51:51 -02:00",
-      "readAt": "2020-12-12T15:48:15.008Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -1901,7 +1901,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2019-09-07T08:17:00 -02:00",
-      "readAt": "2020-12-12T15:48:14.989Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -1918,7 +1918,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-02-24T10:11:49 -01:00",
-      "readAt": "2020-12-12T15:48:15.032Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2139,7 +2139,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-12-05T07:49:56 -01:00",
-      "readAt": "2020-12-12T15:48:15.007Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2208,7 +2208,7 @@
       "attachment": null,
       "sentAt": "2020-07-17T10:48:22 -02:00",
       "readAt": null,
-      "deletedAt": "2020-11-20T16:58:30.735Z"
+      "deletedAt": null
     },
     {
       "id": 131,
@@ -2224,7 +2224,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-04-04T03:21:33 -02:00",
-      "readAt": "2020-12-12T15:48:15.011Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2241,7 +2241,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-10-30T07:32:56 -01:00",
-      "readAt": "2020-12-12T15:48:15.008Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2309,7 +2309,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2019-05-09T12:22:42 -02:00",
-      "readAt": "2020-12-12T15:48:14.991Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2326,7 +2326,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-09-11T05:49:01 -02:00",
-      "readAt": "2020-12-12T15:48:15.018Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2411,7 +2411,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2017-09-25T08:48:40 -02:00",
-      "readAt": "2020-12-12T15:48:15.003Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2428,7 +2428,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-10-04T03:30:55 -02:00",
-      "readAt": "2020-12-12T15:48:15.024Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2445,7 +2445,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2017-10-30T10:07:34 -01:00",
-      "readAt": "2020-12-12T15:48:15.001Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2564,7 +2564,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2020-05-01T04:30:50 -02:00",
-      "readAt": "2020-12-12T15:48:14.985Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2666,7 +2666,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-11-12T12:40:48 -01:00",
-      "readAt": "2020-12-12T15:48:15.015Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2700,7 +2700,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2018-01-19T01:01:26 -01:00",
-      "readAt": "2020-12-12T15:48:15.000Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2768,7 +2768,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-05-05T03:38:15 -02:00",
-      "readAt": "2020-12-12T15:48:15.010Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2853,7 +2853,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2017-06-04T12:36:19 -02:00",
-      "readAt": "2020-12-12T15:48:15.004Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -2921,7 +2921,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2018-02-19T11:01:05 -01:00",
-      "readAt": "2020-12-12T15:48:14.999Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3142,7 +3142,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2017-07-28T02:31:26 -02:00",
-      "readAt": "2020-12-12T15:48:15.004Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3448,7 +3448,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2018-01-13T06:27:54 -01:00",
-      "readAt": "2020-12-12T15:48:15.000Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3516,7 +3516,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2017-07-18T07:34:51 -02:00",
-      "readAt": "2020-12-12T15:48:15.004Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3533,7 +3533,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-07-05T04:02:34 -02:00",
-      "readAt": "2020-12-12T15:48:15.027Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3652,7 +3652,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-08-22T10:23:55 -02:00",
-      "readAt": "2020-12-12T15:48:15.009Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3720,7 +3720,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2015-10-11T11:04:52 -02:00",
-      "readAt": "2020-12-12T15:48:15.018Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3788,7 +3788,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-05-08T10:24:17 -02:00",
-      "readAt": "2020-12-12T15:48:15.030Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3805,7 +3805,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2015-01-07T03:42:11 -01:00",
-      "readAt": "2020-12-12T15:48:15.023Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3839,7 +3839,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2018-09-28T09:43:41 -02:00",
-      "readAt": "2020-12-12T15:48:14.996Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3873,7 +3873,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2015-02-28T03:02:04 -01:00",
-      "readAt": "2020-12-12T15:48:15.021Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3907,7 +3907,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2019-03-04T05:39:52 -01:00",
-      "readAt": "2020-12-12T15:48:14.994Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -3975,7 +3975,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2018-08-04T07:19:55 -02:00",
-      "readAt": "2020-12-12T15:48:14.997Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -4111,7 +4111,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2015-12-16T12:48:23 -01:00",
-      "readAt": "2020-12-12T15:48:15.014Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -4468,7 +4468,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-08-14T07:28:58 -02:00",
-      "readAt": "2020-12-12T15:48:15.026Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -4485,7 +4485,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-06-01T01:30:35 -02:00",
-      "readAt": "2020-12-12T15:48:15.029Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -4519,7 +4519,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-09-07T09:26:14 -02:00",
-      "readAt": "2020-12-12T15:48:15.024Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -4706,7 +4706,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-06-23T04:36:12 -02:00",
-      "readAt": "2020-12-12T15:48:15.029Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -4757,7 +4757,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-05-04T07:48:22 -02:00",
-      "readAt": "2020-12-12T15:48:15.030Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -4774,7 +4774,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2016-09-01T02:36:21 -02:00",
-      "readAt": "2020-12-12T15:48:15.008Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -4842,7 +4842,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-06-23T06:29:09 -02:00",
-      "readAt": "2020-12-12T15:48:15.028Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -4859,7 +4859,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2020-06-06T03:36:11 -02:00",
-      "readAt": "2020-12-12T15:48:14.984Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -4961,7 +4961,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2015-01-27T01:07:20 -01:00",
-      "readAt": "2020-12-12T15:48:15.022Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5097,7 +5097,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2017-05-04T12:49:48 -02:00",
-      "readAt": "2020-12-12T15:48:15.005Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5114,7 +5114,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2015-07-23T08:28:52 -02:00",
-      "readAt": "2020-12-12T15:48:15.019Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5148,7 +5148,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2018-08-24T02:00:33 -02:00",
-      "readAt": "2020-12-12T15:48:14.997Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5216,7 +5216,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-02-18T04:33:34 -01:00",
-      "readAt": "2020-12-12T15:48:14.988Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5233,7 +5233,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2019-03-05T04:34:26 -01:00",
-      "readAt": "2020-12-12T15:48:14.993Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5318,7 +5318,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2018-02-17T11:14:43 -01:00",
-      "readAt": "2020-12-12T15:48:14.999Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5437,7 +5437,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2015-04-16T09:49:32 -02:00",
-      "readAt": "2020-12-12T15:48:15.020Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5471,7 +5471,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2020-02-17T06:05:07 -01:00",
-      "readAt": "2020-12-12T15:48:14.988Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5488,7 +5488,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-06-01T10:45:41 -02:00",
-      "readAt": "2020-12-12T15:48:15.020Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5556,7 +5556,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-04-28T11:18:45 -02:00",
-      "readAt": "2020-12-12T15:48:15.031Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5641,7 +5641,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-10-26T11:49:31 -01:00",
-      "readAt": "2020-12-12T15:48:15.023Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5658,7 +5658,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-01-28T09:35:42 -01:00",
-      "readAt": "2020-12-12T15:48:15.033Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5692,7 +5692,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2019-03-10T03:13:43 -01:00",
-      "readAt": "2020-12-12T15:48:14.993Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5760,7 +5760,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-10-21T06:01:28 -02:00",
-      "readAt": "2020-12-12T15:48:15.024Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -5948,7 +5948,7 @@
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-08-13T03:33:31 -02:00",
       "readAt": "2016-06-05T02:43:33 -02:00",
-      "deletedAt": "2020-11-20T18:30:15.313Z"
+      "deletedAt": null
     },
     {
       "id": 351,
@@ -5964,7 +5964,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2018-01-07T01:35:30 -01:00",
-      "readAt": "2020-12-12T15:48:15.001Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6083,7 +6083,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2019-06-27T11:16:11 -02:00",
-      "readAt": "2020-12-12T15:48:14.991Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6134,7 +6134,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-10-25T03:42:27 -01:00",
-      "readAt": "2020-12-12T15:48:15.016Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6151,7 +6151,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2017-11-01T06:25:57 -01:00",
-      "readAt": "2020-12-12T15:48:15.001Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6202,7 +6202,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2019-12-11T01:42:44 -01:00",
-      "readAt": "2020-12-12T15:48:14.989Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6236,7 +6236,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2015-01-13T03:26:41 -01:00",
-      "readAt": "2020-12-12T15:48:15.022Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6355,7 +6355,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-09-08T09:18:44 -02:00",
-      "readAt": "2020-12-12T15:48:15.018Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6389,7 +6389,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-04-16T05:49:01 -02:00",
-      "readAt": "2020-12-12T15:48:15.031Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6423,7 +6423,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2016-06-30T07:47:24 -02:00",
-      "readAt": "2020-12-12T15:48:15.009Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6474,7 +6474,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2015-10-13T05:31:13 -02:00",
-      "readAt": "2020-12-12T15:48:15.016Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6559,7 +6559,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2018-09-29T09:34:43 -02:00",
-      "readAt": "2020-12-12T15:48:14.995Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6593,7 +6593,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-02-11T06:54:53 -01:00",
-      "readAt": "2020-12-12T15:48:15.012Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6610,7 +6610,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-03-31T04:48:58 -02:00",
-      "readAt": "2020-12-12T15:48:14.987Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6661,7 +6661,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-04-18T10:31:49 -02:00",
-      "readAt": "2020-12-12T15:48:15.020Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6882,7 +6882,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-04-11T08:18:03 -02:00",
-      "readAt": "2020-12-12T15:48:14.986Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -6916,7 +6916,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2016-01-30T11:02:19 -01:00",
-      "readAt": "2020-12-12T15:48:15.013Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7137,7 +7137,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2018-01-29T11:09:17 -01:00",
-      "readAt": "2020-12-12T15:48:14.999Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7290,7 +7290,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-08-11T06:55:34 -02:00",
-      "readAt": "2020-12-12T15:48:15.026Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7307,7 +7307,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-08-13T08:40:54 -02:00",
-      "readAt": "2020-12-12T15:48:15.026Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7341,7 +7341,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2017-05-26T04:07:45 -02:00",
-      "readAt": "2020-12-12T15:48:15.005Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7511,7 +7511,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2015-12-11T08:10:29 -01:00",
-      "readAt": "2020-12-12T15:48:15.015Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7579,7 +7579,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-04-29T12:47:44 -02:00",
-      "readAt": "2020-12-12T15:48:15.031Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7664,7 +7664,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-03-02T12:40:40 -01:00",
-      "readAt": "2020-12-12T15:48:15.021Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7698,7 +7698,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-04-07T07:25:45 -02:00",
-      "readAt": "2020-12-12T15:48:14.986Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7715,7 +7715,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2015-01-09T07:29:59 -01:00",
-      "readAt": "2020-12-12T15:48:15.023Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7868,7 +7868,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2017-02-08T10:54:55 -01:00",
-      "readAt": "2020-12-12T15:48:15.006Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -7902,7 +7902,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2018-10-18T11:04:08 -02:00",
-      "readAt": "2020-12-12T15:48:14.995Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8021,7 +8021,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-11-04T11:27:30 -01:00",
-      "readAt": "2020-12-12T15:48:15.023Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8106,8 +8106,8 @@
       "important": true,
       "attachment": null,
       "sentAt": "2020-08-24T12:06:11 -02:00",
-      "readAt": "2020-11-20T16:57:34.607Z",
-      "deletedAt": "2020-11-20T16:57:38.576Z"
+      "readAt": null,
+      "deletedAt": null
     },
     {
       "id": 478,
@@ -8140,7 +8140,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2018-11-06T05:03:53 -01:00",
-      "readAt": "2020-12-12T15:48:14.995Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8276,7 +8276,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2016-01-01T05:03:28 -01:00",
-      "readAt": "2020-12-12T15:48:15.014Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8310,7 +8310,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-03-09T11:29:02 -01:00",
-      "readAt": "2020-12-12T15:48:15.032Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8429,7 +8429,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-01-09T09:27:35 -01:00",
-      "readAt": "2020-12-12T15:48:15.013Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8497,7 +8497,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2016-04-22T01:25:51 -02:00",
-      "readAt": "2020-12-12T15:48:15.010Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8548,7 +8548,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2019-08-06T06:24:03 -02:00",
-      "readAt": "2020-12-12T15:48:14.990Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8565,7 +8565,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-01-26T08:43:30 -01:00",
-      "readAt": "2020-12-12T15:48:14.988Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8582,7 +8582,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2017-07-31T10:18:59 -02:00",
-      "readAt": "2020-12-12T15:48:15.004Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8650,7 +8650,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-08-15T06:41:11 -02:00",
-      "readAt": "2020-12-12T15:48:15.024Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -8684,8 +8684,8 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-06-30T12:47:14 -02:00",
-      "readAt": "2020-12-12T15:48:14.982Z",
-      "deletedAt": "2020-12-12T15:49:01.140Z"
+      "readAt": null,
+      "deletedAt": null
     },
     {
       "id": 512,
@@ -8786,7 +8786,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-07-20T01:38:31 -02:00",
-      "readAt": "2020-12-12T15:48:15.027Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9075,7 +9075,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2018-08-18T02:06:50 -02:00",
-      "readAt": "2020-12-12T15:48:14.997Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9092,7 +9092,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2017-03-24T06:47:11 -01:00",
-      "readAt": "2020-12-12T15:48:15.006Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9177,7 +9177,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2018-09-20T11:23:06 -02:00",
-      "readAt": "2020-12-12T15:48:14.996Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9211,7 +9211,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2019-07-04T02:12:49 -02:00",
-      "readAt": "2020-12-12T15:48:14.990Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9228,7 +9228,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2017-04-14T06:40:07 -02:00",
-      "readAt": "2020-12-12T15:48:15.005Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9313,7 +9313,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2019-09-26T12:06:50 -02:00",
-      "readAt": "2020-12-12T15:48:14.989Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9330,7 +9330,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2017-10-13T10:04:30 -02:00",
-      "readAt": "2020-12-12T15:48:15.002Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9449,7 +9449,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2017-04-23T04:57:27 -02:00",
-      "readAt": "2020-12-12T15:48:15.005Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9466,7 +9466,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-02-13T09:28:27 -01:00",
-      "readAt": "2020-12-12T15:48:15.033Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9568,7 +9568,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2019-03-21T12:50:57 -01:00",
-      "readAt": "2020-12-12T15:48:14.992Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9653,7 +9653,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-06-24T11:24:09 -02:00",
-      "readAt": "2020-12-12T15:48:15.028Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9670,7 +9670,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2019-05-06T04:28:04 -02:00",
-      "readAt": "2020-12-12T15:48:14.992Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9704,7 +9704,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2018-03-23T11:51:31 -01:00",
-      "readAt": "2020-12-12T15:48:14.998Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9772,8 +9772,8 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-06-30T08:26:21 -02:00",
-      "readAt": "2020-12-12T15:48:14.983Z",
-      "deletedAt": "2020-12-12T15:49:01.140Z"
+      "readAt": null,
+      "deletedAt": null
     },
     {
       "id": 576,
@@ -9789,7 +9789,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2018-09-22T12:47:34 -02:00",
-      "readAt": "2020-12-12T15:48:14.996Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9857,7 +9857,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2016-04-07T05:43:22 -02:00",
-      "readAt": "2020-12-12T15:48:15.011Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9976,7 +9976,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2018-01-17T09:29:32 -01:00",
-      "readAt": "2020-12-12T15:48:15.000Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -9993,7 +9993,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2015-03-18T12:02:19 -01:00",
-      "readAt": "2020-12-12T15:48:15.021Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -10041,11 +10041,11 @@
       "label": "Office",
       "spam": false,
       "sent": false,
-      "important": true,
+      "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-07-30T03:54:16 -02:00",
       "readAt": null,
-      "deletedAt": "2020-11-20T18:30:15.314Z"
+      "deletedAt": null
     },
     {
       "id": 592,
@@ -10061,7 +10061,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2016-05-21T05:38:17 -02:00",
-      "readAt": "2020-12-12T15:48:15.009Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -10078,7 +10078,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2014-05-29T10:01:16 -02:00",
-      "readAt": "2020-12-12T15:48:15.029Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -10231,7 +10231,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-06-03T06:50:16 -02:00",
-      "readAt": "2020-12-12T15:48:14.985Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -10571,7 +10571,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2015-03-31T04:11:39 -02:00",
-      "readAt": "2020-12-12T15:48:15.021Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -10758,7 +10758,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-03-31T06:18:52 -02:00",
-      "readAt": "2020-12-12T15:48:15.032Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -10792,7 +10792,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-09-01T11:44:58 -02:00",
-      "readAt": "2020-12-12T15:48:15.019Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -10809,7 +10809,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2018-12-28T10:20:57 -01:00",
-      "readAt": "2020-12-12T15:48:14.994Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -10860,7 +10860,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2017-08-16T04:06:56 -02:00",
-      "readAt": "2020-12-12T15:48:15.003Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -10993,11 +10993,11 @@
       "label": "Work",
       "spam": true,
       "sent": false,
-      "important": false,
+      "important": true,
       "attachment": null,
       "sentAt": "2020-09-11T01:01:55 -02:00",
-      "readAt": "2020-12-12T15:47:51.103Z",
-      "deletedAt": "2020-12-12T15:47:54.824Z"
+      "readAt": null,
+      "deletedAt": null
     },
     {
       "id": 648,
@@ -11064,7 +11064,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-04-19T08:29:47 -02:00",
-      "readAt": "2020-12-12T15:48:15.031Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11149,7 +11149,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2015-12-10T06:08:36 -01:00",
-      "readAt": "2020-12-12T15:48:15.015Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11200,7 +11200,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2015-07-26T06:15:34 -02:00",
-      "readAt": "2020-12-12T15:48:15.019Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11268,7 +11268,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2019-02-07T01:18:50 -01:00",
-      "readAt": "2020-12-12T15:48:14.994Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11302,7 +11302,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-03-26T02:19:35 -01:00",
-      "readAt": "2020-12-12T15:48:14.987Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11316,10 +11316,10 @@
       "label": "Office",
       "spam": true,
       "sent": false,
-      "important": true,
+      "important": false,
       "attachment": null,
       "sentAt": "2020-06-30T04:44:25 -02:00",
-      "readAt": "2020-12-12T15:48:14.983Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11353,7 +11353,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-11-02T11:04:59 -01:00",
-      "readAt": "2020-12-12T15:48:15.016Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11404,7 +11404,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-05-09T08:21:13 -02:00",
-      "readAt": "2020-12-12T15:48:15.030Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11472,7 +11472,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2018-12-06T03:34:20 -01:00",
-      "readAt": "2020-12-12T15:48:14.994Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11506,7 +11506,7 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2018-04-23T03:19:15 -02:00",
-      "readAt": "2020-12-12T15:48:14.998Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11540,7 +11540,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2018-06-26T05:40:03 -02:00",
-      "readAt": "2020-12-12T15:48:14.998Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11557,7 +11557,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2016-12-19T09:35:16 -01:00",
-      "readAt": "2020-12-12T15:48:15.006Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11608,7 +11608,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2019-03-07T08:06:41 -01:00",
-      "readAt": "2020-12-12T15:48:14.993Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11625,7 +11625,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-08-04T04:20:09 -02:00",
-      "readAt": "2020-12-12T15:48:15.027Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11846,7 +11846,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-03-26T03:21:01 -01:00",
-      "readAt": "2020-12-12T15:48:14.987Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -11880,7 +11880,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-11-12T04:56:02 -01:00",
-      "readAt": "2020-12-12T15:48:15.015Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12033,7 +12033,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-06-29T03:45:51 -02:00",
-      "readAt": "2020-12-12T15:48:15.028Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12050,7 +12050,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2014-03-17T01:22:03 -01:00",
-      "readAt": "2020-12-12T15:48:15.032Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12101,7 +12101,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-09-14T02:44:01 -02:00",
-      "readAt": "2020-12-12T15:48:15.018Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12152,7 +12152,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2015-05-03T09:20:31 -02:00",
-      "readAt": "2020-12-12T15:48:15.020Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12305,7 +12305,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2018-01-05T03:14:31 -01:00",
-      "readAt": "2020-12-12T15:48:15.001Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12373,7 +12373,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-06-28T08:01:57 -02:00",
-      "readAt": "2020-12-12T15:48:15.028Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12390,7 +12390,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2014-02-01T03:26:58 -01:00",
-      "readAt": "2020-12-12T15:48:15.033Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12407,7 +12407,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-01-20T09:56:32 -01:00",
-      "readAt": "2020-12-12T15:48:14.989Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12526,7 +12526,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2015-12-29T12:29:33 -01:00",
-      "readAt": "2020-12-12T15:48:15.014Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12560,7 +12560,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2017-03-27T05:00:12 -02:00",
-      "readAt": "2020-12-12T15:48:15.006Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12594,7 +12594,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2016-02-16T09:59:46 -01:00",
-      "readAt": "2020-12-12T15:48:15.011Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12679,7 +12679,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2019-03-04T08:17:39 -01:00",
-      "readAt": "2020-12-12T15:48:14.993Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12764,7 +12764,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2016-06-06T08:57:58 -02:00",
-      "readAt": "2020-12-12T15:48:15.009Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12781,7 +12781,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-02-29T01:41:03 -01:00",
-      "readAt": "2020-12-12T15:48:14.987Z",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -12897,10 +12897,10 @@
       "label": "Office",
       "spam": false,
       "sent": false,
-      "important": true,
+      "important": false,
       "attachment": null,
       "sentAt": "2020-07-13T07:22:44 -02:00",
-      "readAt": "2020-12-12T15:54:42.613Z",
+      "readAt": "2015-12-20T10:26:04 -01:00",
       "deletedAt": null
     },
     {
@@ -13008,9 +13008,9 @@
   ],
   "profile": {
     "id": "5f5e57be1ea3319c7affe40c",
-    "firstName": "Calderon",
-    "lastName": "William",
+    "firstName": "Hassan",
+    "lastName": "Labhayh",
     "email": "calderonwilliam@artworlds.com",
-    "avatar": "https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/f/f4/User_Avatar_2.png"
   }
 }

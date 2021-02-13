@@ -1,52 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
-import reducer from './reducer';
+import { getMails, getProfile } from './store/reducers/reducers';
 
-import { loadProfile, loadMails } from './actions';
+import { loadProfile, loadMails } from './store/actions/actions';
 
-import Profile from './components/Profile';
-import SideNavigation from './components/SideNavigation';
-import InboxBody from './components/InboxBody';
+import App from './app';
 
-import './index.scss';
+import './index.css';
 
 const composeEnhancers =
-  typeof window === 'object' &&
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?   
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-      trace :true
-    }) : compose;
+  typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+        trace: true,
+      })
+    : compose;
 
-const enhancer = composeEnhancers(
-  applyMiddleware(thunk),
-);
+const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-const store = createStore(
-  reducer,
-  enhancer
-);
+const rootReducer = combineReducers({
+  getMails,
+  getProfile,
+});
+
+const store = createStore(rootReducer, enhancer);
 
 store.dispatch(loadProfile());
 store.dispatch(loadMails());
-
-const App = () =>
-  <div className="container" id="app">
-    <div className="mail-box">
-      <aside className="sm-side">
-        <Profile />
-        <SideNavigation />
-      </aside>
-      <aside className="lg-side">
-        <InboxBody />
-      </aside>
-    </div>
-  </div>;
-
 
 ReactDOM.render(
   <Provider store={store}>
@@ -54,5 +38,5 @@ ReactDOM.render(
       <App />
     </React.StrictMode>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
