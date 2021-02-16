@@ -1,24 +1,36 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { pageChange } from '../store/actions/actions';
 import '../index.css';
 
-const Paginator = ({ totalMails, onPageChange, pagination, mailsPerPage }) => {
+const Paginator = ({ totalMails, onPageChange, pageFrom, pageTo, mailsPerPage, counter }) => {
 
-  const [counter, setCounter] = useState(1);
-  const value = mailsPerPage * counter + 1;
+  console.log(totalMails);
+
+  const [a, setA] = useState(1);
+
+  const value = mailsPerPage * a ;
+
+  console.log(a)
 
   useEffect(() => {
-    onPageChange(value - mailsPerPage, value);
-  }, [counter]);
+    onPageChange((value - mailsPerPage), value);
+    if (counter === 0) {
+      setA(1);
+    }
+  }, [a,counter, value, mailsPerPage, onPageChange]);
 
   const onButtonClick = (type) => {
     if (type === 'prev') {
-      if (counter > 1) {
-        setCounter(counter - 1);
+      if (a > 1) {
+        setA(a - 1);
       }
     } else if (type === 'next') {
-      if (counter + 1 < Math.ceil(totalMails / mailsPerPage)) {
-        setCounter(counter + 1);
+      if (a + 1  < Math.ceil(totalMails / mailsPerPage)) {
+        setA(a + 1);
       }
+    }else {
+      setA(totalMails)
     }
   };
 
@@ -26,11 +38,11 @@ const Paginator = ({ totalMails, onPageChange, pagination, mailsPerPage }) => {
     <ul className="unstyled inbox-pagination">
       <li>
         <span>
-          {pagination.from} - {pagination.to} of {totalMails}
+          {pageFrom +1} - {pageTo} of {totalMails}
         </span>
       </li>
       <li>
-        <button onClick={() => onButtonClick('prev')} disabled={counter <= 1} className="np-btn">
+        <button onClick={() => onButtonClick('prev')} disabled={a <= 1} className="np-btn">
           <i className="fa fa-angle-left  pagination-left"></i>
         </button>
       </li>
@@ -43,4 +55,15 @@ const Paginator = ({ totalMails, onPageChange, pagination, mailsPerPage }) => {
   );
 };
 
-export default Paginator;
+const mapState = (state) => ({
+  mailsPerPage: state.paginator.mailsPerPage,
+  pageFrom: state.paginator.pageFrom,
+  pageTo: state.paginator.pageTo,
+  counter: state.paginator.counter,
+});
+
+const mapDispatch = (dispatch) => ({
+  onPageChange: (pageFrom, pageTo) => dispatch(pageChange(pageFrom, pageTo)),
+});
+
+export default connect(mapState, mapDispatch)(Paginator);

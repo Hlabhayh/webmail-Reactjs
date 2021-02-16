@@ -1,42 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Paginator from './paginator';
 import '../index.css';
 
-const InboxBody = ({ loading, error, mails, section }) => {
-  const [mailsPerPage] = useState(17);
-  const [pagination, setPagination] = useState({
-    from: 0,
-    to: 17,
-  });
-
-  const [filteredMails, setFilteredMails] = useState([]);
-
-  const onPageChange = (from, to) => {
-    setPagination({ from: from, to: to });
-  };
-
-  console.log(section);
-
-  useEffect(() => {
-    setFilteredMails(
-      mails.filter((m) => {
-        switch (section) {
-          case 'inbox':
-            return !m.sent && !m.deletedAt;
-          case 'sent':
-            return m.sent && !m.deletedAt;
-          case 'important':
-            return m.important && !m.deletedAt;
-          case 'trash':
-            return m.deletedAt;
-          default:
-            return m;
-        }
-      }),
-    );
-  }, [mails, section]);
-
+const InboxBody = ({ loading, error, mails, pageFrom, pageTo }) => {
   if (loading) {
     return <div>LOADING...</div>;
   } else if (error) {
@@ -44,17 +11,6 @@ const InboxBody = ({ loading, error, mails, section }) => {
   } else
     return (
       <div>
-        <div className="inbox-head">
-          <h3>Inbox</h3>
-          <form action="#" className="pull-right position">
-            <div className="input-append">
-              <input type="text" className="sr-input" placeholder="Search Mail" />
-              <button className="btn sr-btn" type="button">
-                <i className="fa fa-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
         <div className="inbox-body">
           <div className="mail-option">
             <div className="chk-all">
@@ -66,13 +22,13 @@ const InboxBody = ({ loading, error, mails, section }) => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a href="##"> None</a>
+                    <a href="##"> None </a>
                   </li>
                   <li>
-                    <a href="##"> Read</a>
+                    <a href="##"> Read </a>
                   </li>
                   <li>
-                    <a href="##"> Unread</a>
+                    <a href="##"> Unread </a>
                   </li>
                 </ul>
               </div>
@@ -130,39 +86,60 @@ const InboxBody = ({ loading, error, mails, section }) => {
                 </li>
               </ul>
             </div>
-
-            <Paginator mailsPerPage={mailsPerPage} onPageChange={onPageChange} totalMails={filteredMails.length} pagination={pagination} />
+            <Paginator totalMails={mails.length} />
           </div>
-          {filteredMails
-            .sort((a, b) => (a.sentAt < b.sentAt ? 1 : -1))
-            .slice(pagination.from, pagination.to)
-            .map((mail) => (
-              <table key={mail.id} className={mail.readAt ? 'table table-inbox table-hover read' : 'table table-inbox table-hover unread'}>
-                <tbody>
-                  <tr className={mail.readAt ? 'read' : 'unread'}>
-                    <td className="inbox-small-cells">
-                      <input type="checkbox" className="mail-checkbox" />
-                    </td>
-                    <td className="inbox-small-cells">
-                      <i className="fa fa-star"></i>
-                    </td>
-                    <td className="view-message  dont-show">{mail.sender.name}</td>
-                    <td className="view-message ">{mail.subject}</td>
-                    <td className="view-message  inbox-small-cells">
-                      <i className={mail.attachment ? 'fa fa-paperclip' : 'fa'}></i>
-                    </td>
-                    <td className="view-message  text-right">{mail.sentAt}</td>
-                  </tr>
-                </tbody>
-              </table>
-            ))}
+          {mails.slice(pageFrom, pageTo).map((mail) => (
+            <table key={mail.id} className={mail.readAt ? 'table table-inbox table-hover read' : 'table table-inbox table-hover unread'}>
+              <tbody>
+                <tr className={mail.readAt ? 'read' : 'unread'}>
+                  <td className="inbox-small-cells">
+                    <input type="checkbox" className="mail-checkbox" />
+                  </td>
+                  <td className="inbox-small-cells">
+                    <i className="fa fa-star"></i>
+                  </td>
+                  <td className="view-message  dont-show">{mail.sender.name}</td>
+                  <td className="view-message ">{mail.subject}</td>
+                  <td className="view-message  inbox-small-cells">
+                    <i className={mail.attachment ? 'fa fa-paperclip' : 'fa'}></i>
+                  </td>
+                  <td className="view-message  text-right">{mail.sentAt}</td>
+                </tr>
+              </tbody>
+            </table>
+          ))}
         </div>
       </div>
     );
 };
 const mapState = (state) => ({
+  section: state.changeSection.section,
+  mails: state.getMails.mails
+    .filter((m) => {
+      switch (state.changeSection.section) {
+        case 'inbox':
+          return !m.sent && !m.deletedAt;
+        case 'sent':
+          return m.sent && !m.deletedAt;
+        case 'important':
+          return m.important && !m.deletedAt;
+        case 'trash':
+          return m.deletedAt;
+        default:
+          return m;
+      }
+    })
+    .filter((m) => {
+      if (!state.search.keyword) {
+        return m;
+      }
+      return m.sender.name.toLowerCase().includes(state.search.keyword);
+    })
+    .sort((a, b) => (a.sentAt < b.sentAt ? 1 : -1)),
   loading: state.getMails.mailsLoading,
   error: state.getMails.error,
+  pageFrom: state.paginator.pageFrom,
+  pageTo: state.paginator.pageTo,
 });
 
 export default connect(mapState)(InboxBody);
