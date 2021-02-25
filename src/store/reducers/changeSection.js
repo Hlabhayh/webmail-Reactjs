@@ -1,15 +1,12 @@
-import produce from 'immer';
-
 import { ON_CHANGE_SECTION } from '../actions/actions';
 
-const initialState = {
-  section: 'inbox',
-};
-
-const changeSection = produce((draft, action) => {
-  if (action.type === ON_CHANGE_SECTION) {
-    draft = { ...draft, section: (draft.section = action.payload) };
+const changeSection = (state = {section: 'inbox'}, action) => {
+  switch (action.type) {
+    case ON_CHANGE_SECTION:
+      return (state = { ...state, section: (state.section = action.payload) });
+    default:
+      return state;
   }
-}, initialState);
+};
 
 export default changeSection;

@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { setKeyword } from '../store/actions/actions';
 
 
-const searchBar = ({ keyword, onSetKeyword}) => {
+const searchBar = ({ keyword, onSetKeyword, title}) => {
 
   return (
     <div className="inbox-head">
-      <h3>Inbox</h3>
+      <h3>{title}</h3>
       <form  className="pull-right position" onSubmit={(e)=> e.preventDefault()}>
         <div className="input-append">
           <input type="text" className="sr-input" placeholder="Search Mail" 
@@ -22,7 +22,8 @@ const searchBar = ({ keyword, onSetKeyword}) => {
   );
 };
 
-const mapState = () => ({
+const mapState = state => ({
+  title: state.changeSection.section,
 });
 
 const mapDispatch = (dispatch) => ({

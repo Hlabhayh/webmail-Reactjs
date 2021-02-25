@@ -5,9 +5,10 @@ const initialState = {
   keyword: '',
 };
 
-export const search = produce((draft, action) => {
+const search = produce((draft, action) => {
   if (action.type === ON_SEARCH) {
     draft = {keyword: draft.keyword = action.payload};
   }
 }, initialState);
 
+export default search ;

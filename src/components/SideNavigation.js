@@ -10,7 +10,7 @@ function SideNavigation({ sections, changeSection }) {
       <ul className="inbox-nav inbox-divider">
         {sections.map((sec) => (
           <li key={sec.key} className={sec.active ? 'active' : 'inactive'}>
-            <a href="##" onClick={() => changeSection(sec.key)}>
+            <a href='#!' onClick={() => changeSection(sec.key)}>
               <i className={sec.icon}></i>
               {sec.label}
               <span className={sec.color}> {sec.total} </span>
@@ -45,7 +45,7 @@ const mapState = (state) => ({
     {
       key: 'inbox',
       label: 'Inbox',
-      total: state.getMails.mails.filter((mail) => {
+      total: state.handleMails.mails.filter((mail) => {
         return mail.sent === false && mail.deletedAt === null;
       }).length,
       active: state.changeSection.section === 'inbox',
@@ -55,7 +55,7 @@ const mapState = (state) => ({
     {
       key: 'sent',
       label: 'Sent Mails',
-      total: state.getMails.mails.filter((mail) => {
+      total: state.handleMails.mails.filter((mail) => {
         return mail.sent === true && mail.deletedAt === null;
       }).length,
       active: state.changeSection.section === 'sent',
@@ -65,7 +65,7 @@ const mapState = (state) => ({
     {
       key: 'important',
       label: 'Important',
-      total: state.getMails.mails.filter((mail) => {
+      total: state.handleMails.mails.filter((mail) => {
         return mail.important === true && mail.deletedAt === null;
       }).length,
       active: state.changeSection.section === 'important',
@@ -75,7 +75,7 @@ const mapState = (state) => ({
     {
       key: 'trash',
       label: 'Trash',
-      total: state.getMails.mails.filter((mail) => {
+      total: state.handleMails.mails.filter((mail) => {
         return mail.deletedAt !== null;
       }).length,
       active: state.changeSection.section === 'trash',

@@ -5,11 +5,12 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
-import getMails from './store/reducers/getMails';
-import getProfile from './store/reducers/getProfile';
+import handleMails from './store/reducers/handleMails';
+import handleProfile from './store/reducers/handleProfile';
 import paginator from './store/reducers/pageChange';
 import changeSection from './store/reducers/changeSection';
-import { search } from './store/reducers/search';
+import search from './store/reducers/searchR';
+import composeR from './store/reducers/composeR';
 
 import { loadProfile, loadMails } from './store/actions/actions';
 
@@ -21,17 +22,19 @@ const composeEnhancers =
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
         trace: true,
+        serialize: true,
       })
     : compose;
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
 
 const rootReducer = combineReducers({
-  getMails,
-  getProfile,
+  handleMails,
+  handleProfile,
   changeSection,
   paginator,
   search,
+  composeR,
 });
 
 const store = createStore(rootReducer, enhancer);

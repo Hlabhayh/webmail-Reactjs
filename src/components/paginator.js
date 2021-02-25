@@ -5,13 +5,9 @@ import '../index.css';
 
 const Paginator = ({ totalMails, onPageChange, pageFrom, pageTo, mailsPerPage, counter }) => {
 
-  console.log(totalMails);
-
   const [a, setA] = useState(1);
 
   const value = mailsPerPage * a ;
-
-  console.log(a)
 
   useEffect(() => {
     onPageChange((value - mailsPerPage), value);

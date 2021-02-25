@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Paginator from './paginator';
+import { readMail, markAsRead, unreadMail, removeMail } from '../store/actions/actions';
 import '../index.css';
 
-const InboxBody = ({ loading, error, mails, pageFrom, pageTo }) => {
+const InboxBody = ({ loading, error, mails, pageFrom, pageTo, openMail, selectedMail, closeMail, markAsUnread, deleteMail }) => {
   if (loading) {
     return <div>LOADING...</div>;
   } else if (error) {
@@ -88,33 +89,74 @@ const InboxBody = ({ loading, error, mails, pageFrom, pageTo }) => {
             </div>
             <Paginator totalMails={mails.length} />
           </div>
-          {mails.slice(pageFrom, pageTo).map((mail) => (
-            <table key={mail.id} className={mail.readAt ? 'table table-inbox table-hover read' : 'table table-inbox table-hover unread'}>
-              <tbody>
-                <tr className={mail.readAt ? 'read' : 'unread'}>
-                  <td className="inbox-small-cells">
-                    <input type="checkbox" className="mail-checkbox" />
-                  </td>
-                  <td className="inbox-small-cells">
-                    <i className="fa fa-star"></i>
-                  </td>
-                  <td className="view-message  dont-show">{mail.sender.name}</td>
-                  <td className="view-message ">{mail.subject}</td>
-                  <td className="view-message  inbox-small-cells">
-                    <i className={mail.attachment ? 'fa fa-paperclip' : 'fa'}></i>
-                  </td>
-                  <td className="view-message  text-right">{mail.sentAt}</td>
-                </tr>
-              </tbody>
-            </table>
-          ))}
+          {selectedMail ? (
+            <div key={selectedMail.id} className="table table-inbox table-hover">
+              <div className="message-box">
+                <div className="message-options">
+                  <button className="btn btn-primary" onClick={() => closeMail(selectedMail)}>
+                    <i className="fa fa-arrow-left" aria-hidden="true"></i> Back
+                  </button>
+                  <button className="btn btn-success" onClick={() => markAsUnread(selectedMail)}>
+                    <span className="glyphicon glyphicon-envelope"></span> mark as unread
+                  </button>
+                  <button className="btn btn-danger" onClick={() => deleteMail(selectedMail)}>
+                    <span className="btn-label">
+                      <i className="glyphicon glyphicon-trash"></i>
+                    </span>
+                    Delete
+                  </button>
+                </div>
+                <p>
+                  <strong>From: </strong>
+                  {selectedMail.sender.name}
+                </p>
+                <p>
+                  <strong>Date: </strong>
+                  {selectedMail.sentAt}
+                </p>
+                <p>
+                  <strong>Message :</strong>
+                  {selectedMail.content}
+                </p>
+                <hr></hr>
+                <div className="message"></div>
+                <div>
+                  <h4>{selectedMail.attachment}</h4>
+                  <ul></ul>
+                </div>
+              </div>
+            </div>
+          ) : (
+            mails.slice(pageFrom, pageTo).map((mail) => (
+              <table key={mail.id} className={mail.readAt ? 'table table-inbox table-hover read' : 'table table-inbox table-hover unread'}>
+                <tbody>
+                  <tr className={mail.readAt ? 'read' : 'unread'}>
+                    <td className="inbox-small-cells">
+                      <input type="checkbox" className="mail-checkbox" />
+                    </td>
+                    <td className="inbox-small-cells">
+                      <i className="fa fa-star"></i>
+                    </td>
+                    <td className="view-message dont-show">{mail.sender.name}</td>
+                    <td className="view-message" onClick={() => openMail(mail)}>
+                      {mail.subject}
+                    </td>
+                    <td className="view-message  inbox-small-cells">
+                      <i className={mail.attachment ? 'fa fa-paperclip' : 'fa'}></i>
+                    </td>
+                    <td className="view-message  text-right">{mail.sentAt}</td>
+                  </tr>
+                </tbody>
+              </table>
+            ))
+          )}
         </div>
       </div>
     );
 };
 const mapState = (state) => ({
   section: state.changeSection.section,
-  mails: state.getMails.mails
+  mails: state.handleMails.mails
     .filter((m) => {
       switch (state.changeSection.section) {
         case 'inbox':
@@ -136,10 +178,18 @@ const mapState = (state) => ({
       return m.sender.name.toLowerCase().includes(state.search.keyword);
     })
     .sort((a, b) => (a.sentAt < b.sentAt ? 1 : -1)),
-  loading: state.getMails.mailsLoading,
-  error: state.getMails.error,
+  loading: state.handleMails.mailsLoading,
+  error: state.handleMails.error,
   pageFrom: state.paginator.pageFrom,
   pageTo: state.paginator.pageTo,
+  selectedMail: state.handleMails.selectedMail,
 });
 
-export default connect(mapState)(InboxBody);
+const mapDispatch = (Dipsatch) => ({
+  openMail: (e) => Dipsatch(readMail(e)),
+  closeMail: (e) => Dipsatch(markAsRead(e)),
+  markAsUnread: (e) => Dipsatch(unreadMail(e)),
+  deleteMail: (e) => Dipsatch(removeMail(e)),
+});
+
+export default connect(mapState, mapDispatch)(InboxBody);

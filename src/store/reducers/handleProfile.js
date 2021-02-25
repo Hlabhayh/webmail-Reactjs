@@ -10,7 +10,7 @@ const initialState = {
   profile: {},
   profileLoaing: false,
 }
-export const getProfile = produce((draft, action) => {
+export const handleProfile = produce((draft, action) => {
     switch (action.type) {
       case LOAD_PROFILE_BIGIN:
         draft.profileLoading = true;
@@ -28,4 +28,4 @@ export const getProfile = produce((draft, action) => {
     }
   }, initialState);
 
-export default getProfile;
+export default handleProfile;
