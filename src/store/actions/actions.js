@@ -1,4 +1,4 @@
-import { getProfile, getMails, } from '../api';
+import { getProfile, getMails } from '../api';
 
 import axios from 'axios';
 
@@ -24,6 +24,18 @@ export const READ_MAIL = 'READ_MAIL';
 export const CLOSE_MAIL = 'CLOSE_MAIL';
 export const ONLY_CLOSE_MAIL = 'ONLY_CLOSE_MAIL';
 export const DELETE_MAIL = 'DELETE_MAIL';
+
+export const ON_CHECK_MAIL = 'ON_CHECK_MAIL';
+export const ON_CHECK_ALL = 'ON_CHECK_ALL';
+export const HANDLE_DELETE_SELECTED = 'HANDLE_DELETE_SELECTED';
+
+export const MARK_IMPORTANCE = 'MARK_IMPORTANCE';
+export const MARK_CHECKED_AS_READ = 'MARK_CHECKED_AS_READ';
+export const X_MARK_CHECKED = 'X_MARK_CHECKED';
+export const HANDLE_CHECKBOX = 'HANDLE_CHECKBOX';
+export const HANDLE_CHECKALL = 'HANDLE_CHECKALL';
+
+export const SHOWEN_MAILS= 'SHOWEN_MAILS';
 
 //load Profile :
 export const loadProfile = () => {
@@ -80,7 +92,7 @@ export const markAsRead = (e) => {
   return (dispatch) => {
     if (e.readAt === null) {
       return axios
-        .put('/mails/' + e.id, {
+        .put('http://localhost:8080/mails/' + e.id, {
           ...e,
           readAt: new Date(),
         })
@@ -101,7 +113,7 @@ export const unreadMail = (e) => {
   return (dispatch) => {
     if (e.readAt !== null) {
       return axios
-        .put('/mails/' + e.id, {
+        .put('http://localhost:8080/mails/' + e.id, {
           ...e,
           readAt: null,
         })
@@ -117,12 +129,12 @@ export const unreadMail = (e) => {
     }
   };
 };
-// move mail to trush or delete is from api : 
+// move mail to trush or delete is from api :
 export const removeMail = (e) => {
   return (dispatch) => {
     if (e.deletedAt === null) {
       axios
-        .put('/mails/' + e.id, {
+        .put('http://localhost:8080/mails/' + e.id, {
           ...e,
           deletedAt: new Date(),
         })
@@ -130,14 +142,117 @@ export const removeMail = (e) => {
           const data = res.data;
           dispatch({ type: DELETE_MAIL, data });
         })
-        .then((err) => {
+        .catch((err) => {
           console.error(err);
         });
     } else {
       axios
-        .delete('/mails/' + e.id, {})
+        .delete('http://localhost:8080/mails/' + e.id, {})
         .then(alert('this mail will be DELETED forever !!'))
         .then(window.location.reload());
     }
   };
+};
+
+export const importantMail = (e) => {
+  return (dispatch) => {
+    if (e.important === false) {
+      axios
+        .put('http://localhost:8080/mails/' + e.id, {
+          ...e,
+          important: true,
+        })
+        .then((res) => {
+          const data = res.data;
+          dispatch({ type: MARK_IMPORTANCE, data });
+        })
+        .catch((err) => console.error(err));
+    } else {
+      axios
+        .put('http://localhost:8080/mails/' + e.id, {
+          ...e,
+          important: false,
+        })
+        .then((res) => {
+          const data = res.data;
+          dispatch({ type: MARK_IMPORTANCE, data });
+        })
+        .catch((err) => console.error(err));
+    }
+  };
+};
+
+export const markSelectedAsRead = (e) => {
+  return (dispatch) => {
+    e.forEach((c) => {
+      if (c.readAt === null) {
+        axios
+          .put('http://localhost:8080/mails/' + c.id, {
+            ...c,
+            readAt: new Date(),
+          })
+          .then((res) => {
+            const data = res.data;
+            dispatch({ type: MARK_CHECKED_AS_READ, data });
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      } else {
+        dispatch({ type: X_MARK_CHECKED });
+      }
+    });
+  };
+};
+
+export const handleChange = (m, e) => {
+  return { type: HANDLE_CHECKBOX, m, e };
+};
+
+export const handleCheckAll = (mails) => {
+  return { type: HANDLE_CHECKALL, mails };
+};
+
+export const handleDeleteSelected = (val) => {
+  return (dispatch) => {
+    console.log(val);
+    val.map((e) =>
+      axios
+        .put('http://localhost:8080/mails/' + e.id, {
+          ...e,
+          deletedAt: new Date(),
+        })
+        .then((res) => {
+          const data = res.data;
+          dispatch({ type: HANDLE_DELETE_SELECTED, data });
+        })
+        .catch((err) => {
+          console.error(err);
+        }),
+    );
+  };
+};
+
+export const showReadMails = () => {
+  return (dispatch) =>
+    axios.get('http://localhost:8080/mails').then((res) => {
+      const data = res.data.filter((d) => d.readAt);
+      dispatch({ type: SHOWEN_MAILS, data });
+    });
+};
+
+export const showAllMails = () => {
+  return (dispatch) =>
+    axios.get('http://localhost:8080/mails').then((res) => {
+      const data = res.data;
+      dispatch({ type: SHOWEN_MAILS, data });
+    });
+};
+
+export const showUnreadMails = () => {
+  return (dispatch) =>
+    axios.get('http://localhost:8080/mails').then((res) => {
+      const data = res.data.filter((d) => !d.readAt);
+      dispatch({ type: SHOWEN_MAILS, data });
+    });
 };

@@ -34,7 +34,7 @@ const Paginator = ({ totalMails, onPageChange, pageFrom, pageTo, mailsPerPage, c
     <ul className="unstyled inbox-pagination">
       <li>
         <span>
-          {pageFrom +1} - {pageTo} of {totalMails}
+          {totalMails === 0 ? 0 : pageFrom +1} - {totalMails <= pageTo ? totalMails : pageTo} of {totalMails}
         </span>
       </li>
       <li>

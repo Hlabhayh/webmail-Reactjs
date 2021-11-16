@@ -1,21 +1,42 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Paginator from './paginator';
-import { readMail, markAsRead, unreadMail, removeMail } from '../store/actions/actions';
+import { readMail, markAsRead, unreadMail, removeMail, importantMail, markSelectedAsRead, handleChange, handleCheckAll, handleDeleteSelected, showReadMails, showAllMails, showUnreadMails } from '../store/actions/actions';
 import '../index.css';
 
-const InboxBody = ({ loading, error, mails, pageFrom, pageTo, openMail, selectedMail, closeMail, markAsUnread, deleteMail }) => {
+const InboxBody = ({
+  loading,
+  error,
+  mails,
+  pageFrom,
+  pageTo,
+  openMail,
+  selectedMail,
+  closeMail,
+  markAsUnread,
+  deleteMail,
+  importantMail,
+  markCheckedAsRead,
+  handleChange,
+  checkAll,
+  deleteSelected,
+  allChecked,
+  showReadMails,
+  showAllMails,
+  showUnreadMails,
+  value,
+}) => {
   if (loading) {
     return <div>LOADING...</div>;
   } else if (error) {
     return console.error(error);
   } else
-    return (
+  return (
       <div>
         <div className="inbox-body">
           <div className="mail-option">
             <div className="chk-all">
-              <input type="checkbox" className="mail-checkbox mail-group-checkbox" />
+              <input type="checkbox" onClick={() => checkAll(mails)} className="mail-checkbox mail-group-checkbox" />
               <div className="btn-group">
                 <a data-toggle="dropdown" href="##" className="btn mini all" aria-expanded="false">
                   All
@@ -23,13 +44,13 @@ const InboxBody = ({ loading, error, mails, pageFrom, pageTo, openMail, selected
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a href="##"> None </a>
+                    <a href="##" onClick={() => showAllMails()}> None </a>
                   </li>
                   <li>
-                    <a href="##"> Read </a>
+                    <a href="##" onClick={()=> showReadMails()}> Read </a>
                   </li>
                   <li>
-                    <a href="##"> Unread </a>
+                    <a href="##" onClick={() => showUnreadMails()}> Unread </a>
                   </li>
                 </ul>
               </div>
@@ -46,7 +67,7 @@ const InboxBody = ({ loading, error, mails, pageFrom, pageTo, openMail, selected
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a href="##">
+                  <a href="##" onClick={() => markCheckedAsRead(value)}>
                     <i className="fa fa-pencil"></i> Mark as Read
                   </a>
                 </li>
@@ -57,31 +78,7 @@ const InboxBody = ({ loading, error, mails, pageFrom, pageTo, openMail, selected
                 </li>
                 <li className="divider"></li>
                 <li>
-                  <a href="##">
-                    <i className="fa fa-trash-o"></i> Delete
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="btn-group">
-              <a data-toggle="dropdown" href="##" className="btn mini blue">
-                Move to
-                <i className="fa fa-angle-down "></i>
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a href="##">
-                    <i className="fa fa-pencil"></i> Mark as Read
-                  </a>
-                </li>
-                <li>
-                  <a href="##">
-                    <i className="fa fa-ban"></i> Spam
-                  </a>
-                </li>
-                <li className="divider"></li>
-                <li>
-                  <a href="##">
+                  <a href="##" onClick={() => deleteSelected(value)}>
                     <i className="fa fa-trash-o"></i> Delete
                   </a>
                 </li>
@@ -132,10 +129,10 @@ const InboxBody = ({ loading, error, mails, pageFrom, pageTo, openMail, selected
                 <tbody>
                   <tr className={mail.readAt ? 'read' : 'unread'}>
                     <td className="inbox-small-cells">
-                      <input type="checkbox" className="mail-checkbox" />
+                      <input className="mail-checkbox" checked={allChecked === true ? true : null} type="checkbox" onChange={(e) => handleChange(mail, e)} />
                     </td>
                     <td className="inbox-small-cells">
-                      <i className="fa fa-star"></i>
+                      <i className={mail.important ? 'fa fa-star inbox-started' : 'fa fa-star'} onClick={() => importantMail(mail)}></i>
                     </td>
                     <td className="view-message dont-show">{mail.sender.name}</td>
                     <td className="view-message" onClick={() => openMail(mail)}>
@@ -183,13 +180,23 @@ const mapState = (state) => ({
   pageFrom: state.paginator.pageFrom,
   pageTo: state.paginator.pageTo,
   selectedMail: state.handleMails.selectedMail,
+  value: state.handleMails.value,
+  allChecked: state.handleMails.allChecked,
 });
 
-const mapDispatch = (Dipsatch) => ({
-  openMail: (e) => Dipsatch(readMail(e)),
-  closeMail: (e) => Dipsatch(markAsRead(e)),
-  markAsUnread: (e) => Dipsatch(unreadMail(e)),
-  deleteMail: (e) => Dipsatch(removeMail(e)),
+const mapDispatch = (Dispatch) => ({
+  openMail: (e) => Dispatch(readMail(e)),
+  closeMail: (e) => Dispatch(markAsRead(e)),
+  markAsUnread: (e) => Dispatch(unreadMail(e)),
+  deleteMail: (e) => Dispatch(removeMail(e)),
+  importantMail: (e) => Dispatch(importantMail(e)),
+  markCheckedAsRead: (e) => Dispatch(markSelectedAsRead(e)),
+  handleChange: (m, e) => Dispatch(handleChange(m, e)),
+  checkAll: (e) => Dispatch(handleCheckAll(e)),
+  deleteSelected: (v) => Dispatch(handleDeleteSelected(v)),
+  showReadMails: () => Dispatch(showReadMails()),
+  showAllMails: () => Dispatch(showAllMails()),
+  showUnreadMails: () => Dispatch(showUnreadMails()),
 });
 
 export default connect(mapState, mapDispatch)(InboxBody);
