@@ -1,71 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { changeSection } from '../store/actions/actions';
+import '../index.css';
 
-function SideNavigation({ onChangeSection, sections }) {
+function SideNavigation({ sections, changeSection }) {
+
   return (
     <div>
-      <div className="inbox-body">
-        <a href="#myModal" data-toggle="modal" title="Compose" className="btn btn-compose">
-          Compose
-        </a>
-        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" id="myModal" className="modal fade">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <button aria-hidden="true" data-dismiss="modal" className="close" type="button">
-                  ×
-                </button>
-                <h4 className="modal-title">Compose</h4>
-              </div>
-              <div className="modal-body">
-                <form className="form-horizontal">
-                  <div className="form-group">
-                    <label className="col-lg-2 control-label">To</label>
-                    <div className="col-lg-10">
-                      <input type="text" placeholder="" id="inputEmail1" className="form-control" />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="col-lg-2 control-label">Cc / Bcc</label>
-                    <div className="col-lg-10">
-                      <input type="text" placeholder="" id="cc" className="form-control" />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="col-lg-2 control-label">Subject</label>
-                    <div className="col-lg-10">
-                      <input type="text" placeholder="" id="inputPassword1" className="form-control" />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="col-lg-2 control-label">Message</label>
-                    <div className="col-lg-10">
-                      <textarea rows="10" cols="30" className="form-control" id="" name=""></textarea>
-                    </div>
-                  </div>
-
-                  <div className="form-group">
-                    <div className="col-lg-offset-2 col-lg-10">
-                      <span className="btn green fileinput-button">
-                        <i className="fa fa-plus fa fa-white"></i>
-                        <span>Attachment</span>
-                        <input type="file" name="files[]" multiple="" />
-                      </span>
-                      <button className="btn btn-send" type="submit">
-                        Send
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <ul className="inbox-nav inbox-divider">
         {sections.map((sec) => (
           <li key={sec.key} className={sec.active ? 'active' : 'inactive'}>
-            <a href="##" onClick={() => onChangeSection(sec.key)}>
+            <a href='#!' onClick={() => changeSection(sec.key)}>
               <i className={sec.icon}></i>
               {sec.label}
               <span className={sec.color}> {sec.total} </span>
@@ -94,5 +39,54 @@ function SideNavigation({ onChangeSection, sections }) {
     </div>
   );
 }
+const mapState = (state) => ({
 
-export default SideNavigation;
+  sections: [
+    {
+      key: 'inbox',
+      label: 'Inbox',
+      total: state.handleMails.mails.filter((mail) => {
+        return mail.sent === false && mail.deletedAt === null;
+      }).length,
+      active: state.changeSection.section === 'inbox',
+      icon: 'fa fa-inbox',
+      color: 'label label-danger pull-right',
+    },
+    {
+      key: 'sent',
+      label: 'Sent Mails',
+      total: state.handleMails.mails.filter((mail) => {
+        return mail.sent === true && mail.deletedAt === null;
+      }).length,
+      active: state.changeSection.section === 'sent',
+      icon: 'fa fa-envelope-o',
+      color: 'label label-success pull-right',
+    },
+    {
+      key: 'important',
+      label: 'Important',
+      total: state.handleMails.mails.filter((mail) => {
+        return mail.important === true && mail.deletedAt === null;
+      }).length,
+      active: state.changeSection.section === 'important',
+      icon: 'fa fa-bookmark-o',
+      color: 'label label-info pull-right',
+    },
+    {
+      key: 'trash',
+      label: 'Trash',
+      total: state.handleMails.mails.filter((mail) => {
+        return mail.deletedAt !== null;
+      }).length,
+      active: state.changeSection.section === 'trash',
+      icon: 'fa fa-inbox',
+      color: 'label label-default pull-right',
+    },
+  ],
+});
+
+const mapDispatch = (dispatch) => ({
+  changeSection: (sec) => dispatch(changeSection(sec)),
+});
+
+export default connect(mapState, mapDispatch)(SideNavigation);

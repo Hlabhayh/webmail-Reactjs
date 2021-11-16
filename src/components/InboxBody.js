@@ -1,64 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Paginator from './paginator';
+import { readMail, markAsRead, unreadMail, removeMail, importantMail, markSelectedAsRead, handleChange, handleCheckAll, handleDeleteSelected, showReadMails, showAllMails, showUnreadMails } from '../store/actions/actions';
 import '../index.css';
 
-const InboxBody = ({ loading, error, mails, section }) => {
-  const [mailsPerPage] = useState(17);
-  const [pagination, setPagination] = useState({
-    from: 0,
-    to: 17,
-  });
-
-  const [filteredMails, setFilteredMails] = useState([]);
-
-  const onPageChange = (from, to) => {
-    setPagination({ from: from, to: to });
-  };
-
-  console.log(section);
-
-  useEffect(() => {
-    setFilteredMails(
-      mails.filter((m) => {
-        switch (section) {
-          case 'inbox':
-            return !m.sent && !m.deletedAt;
-          case 'sent':
-            return m.sent && !m.deletedAt;
-          case 'important':
-            return m.important && !m.deletedAt;
-          case 'trash':
-            return m.deletedAt;
-          default:
-            return m;
-        }
-      }),
-    );
-  }, [mails, section]);
-
+const InboxBody = ({
+  loading,
+  error,
+  mails,
+  pageFrom,
+  pageTo,
+  openMail,
+  selectedMail,
+  closeMail,
+  markAsUnread,
+  deleteMail,
+  importantMail,
+  markCheckedAsRead,
+  handleChange,
+  checkAll,
+  deleteSelected,
+  allChecked,
+  showReadMails,
+  showAllMails,
+  showUnreadMails,
+  value,
+}) => {
   if (loading) {
     return <div>LOADING...</div>;
   } else if (error) {
     return console.error(error);
   } else
-    return (
+  return (
       <div>
-        <div className="inbox-head">
-          <h3>Inbox</h3>
-          <form action="#" className="pull-right position">
-            <div className="input-append">
-              <input type="text" className="sr-input" placeholder="Search Mail" />
-              <button className="btn sr-btn" type="button">
-                <i className="fa fa-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
         <div className="inbox-body">
           <div className="mail-option">
             <div className="chk-all">
-              <input type="checkbox" className="mail-checkbox mail-group-checkbox" />
+              <input type="checkbox" onClick={() => checkAll(mails)} className="mail-checkbox mail-group-checkbox" />
               <div className="btn-group">
                 <a data-toggle="dropdown" href="##" className="btn mini all" aria-expanded="false">
                   All
@@ -66,13 +44,13 @@ const InboxBody = ({ loading, error, mails, section }) => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a href="##"> None</a>
+                    <a href="##" onClick={() => showAllMails()}> None </a>
                   </li>
                   <li>
-                    <a href="##"> Read</a>
+                    <a href="##" onClick={()=> showReadMails()}> Read </a>
                   </li>
                   <li>
-                    <a href="##"> Unread</a>
+                    <a href="##" onClick={() => showUnreadMails()}> Unread </a>
                   </li>
                 </ul>
               </div>
@@ -89,7 +67,7 @@ const InboxBody = ({ loading, error, mails, section }) => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a href="##">
+                  <a href="##" onClick={() => markCheckedAsRead(value)}>
                     <i className="fa fa-pencil"></i> Mark as Read
                   </a>
                 </li>
@@ -100,54 +78,66 @@ const InboxBody = ({ loading, error, mails, section }) => {
                 </li>
                 <li className="divider"></li>
                 <li>
-                  <a href="##">
+                  <a href="##" onClick={() => deleteSelected(value)}>
                     <i className="fa fa-trash-o"></i> Delete
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="btn-group">
-              <a data-toggle="dropdown" href="##" className="btn mini blue">
-                Move to
-                <i className="fa fa-angle-down "></i>
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a href="##">
-                    <i className="fa fa-pencil"></i> Mark as Read
-                  </a>
-                </li>
-                <li>
-                  <a href="##">
-                    <i className="fa fa-ban"></i> Spam
-                  </a>
-                </li>
-                <li className="divider"></li>
-                <li>
-                  <a href="##">
-                    <i className="fa fa-trash-o"></i> Delete
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <Paginator mailsPerPage={mailsPerPage} onPageChange={onPageChange} totalMails={filteredMails.length} pagination={pagination} />
+            <Paginator totalMails={mails.length} />
           </div>
-          {filteredMails
-            .sort((a, b) => (a.sentAt < b.sentAt ? 1 : -1))
-            .slice(pagination.from, pagination.to)
-            .map((mail) => (
+          {selectedMail ? (
+            <div key={selectedMail.id} className="table table-inbox table-hover">
+              <div className="message-box">
+                <div className="message-options">
+                  <button className="btn btn-primary" onClick={() => closeMail(selectedMail)}>
+                    <i className="fa fa-arrow-left" aria-hidden="true"></i> Back
+                  </button>
+                  <button className="btn btn-success" onClick={() => markAsUnread(selectedMail)}>
+                    <span className="glyphicon glyphicon-envelope"></span> mark as unread
+                  </button>
+                  <button className="btn btn-danger" onClick={() => deleteMail(selectedMail)}>
+                    <span className="btn-label">
+                      <i className="glyphicon glyphicon-trash"></i>
+                    </span>
+                    Delete
+                  </button>
+                </div>
+                <p>
+                  <strong>From: </strong>
+                  {selectedMail.sender.name}
+                </p>
+                <p>
+                  <strong>Date: </strong>
+                  {selectedMail.sentAt}
+                </p>
+                <p>
+                  <strong>Message :</strong>
+                  {selectedMail.content}
+                </p>
+                <hr></hr>
+                <div className="message"></div>
+                <div>
+                  <h4>{selectedMail.attachment}</h4>
+                  <ul></ul>
+                </div>
+              </div>
+            </div>
+          ) : (
+            mails.slice(pageFrom, pageTo).map((mail) => (
               <table key={mail.id} className={mail.readAt ? 'table table-inbox table-hover read' : 'table table-inbox table-hover unread'}>
                 <tbody>
                   <tr className={mail.readAt ? 'read' : 'unread'}>
                     <td className="inbox-small-cells">
-                      <input type="checkbox" className="mail-checkbox" />
+                      <input className="mail-checkbox" checked={allChecked === true ? true : null} type="checkbox" onChange={(e) => handleChange(mail, e)} />
                     </td>
                     <td className="inbox-small-cells">
-                      <i className="fa fa-star"></i>
+                      <i className={mail.important ? 'fa fa-star inbox-started' : 'fa fa-star'} onClick={() => importantMail(mail)}></i>
                     </td>
-                    <td className="view-message  dont-show">{mail.sender.name}</td>
-                    <td className="view-message ">{mail.subject}</td>
+                    <td className="view-message dont-show">{mail.sender.name}</td>
+                    <td className="view-message" onClick={() => openMail(mail)}>
+                      {mail.subject}
+                    </td>
                     <td className="view-message  inbox-small-cells">
                       <i className={mail.attachment ? 'fa fa-paperclip' : 'fa'}></i>
                     </td>
@@ -155,14 +145,58 @@ const InboxBody = ({ loading, error, mails, section }) => {
                   </tr>
                 </tbody>
               </table>
-            ))}
+            ))
+          )}
         </div>
       </div>
     );
 };
 const mapState = (state) => ({
-  loading: state.getMails.mailsLoading,
-  error: state.getMails.error,
+  section: state.changeSection.section,
+  mails: state.handleMails.mails
+    .filter((m) => {
+      switch (state.changeSection.section) {
+        case 'inbox':
+          return !m.sent && !m.deletedAt;
+        case 'sent':
+          return m.sent && !m.deletedAt;
+        case 'important':
+          return m.important && !m.deletedAt;
+        case 'trash':
+          return m.deletedAt;
+        default:
+          return m;
+      }
+    })
+    .filter((m) => {
+      if (!state.search.keyword) {
+        return m;
+      }
+      return m.sender.name.toLowerCase().includes(state.search.keyword);
+    })
+    .sort((a, b) => (a.sentAt < b.sentAt ? 1 : -1)),
+  loading: state.handleMails.mailsLoading,
+  error: state.handleMails.error,
+  pageFrom: state.paginator.pageFrom,
+  pageTo: state.paginator.pageTo,
+  selectedMail: state.handleMails.selectedMail,
+  value: state.handleMails.value,
+  allChecked: state.handleMails.allChecked,
 });
 
-export default connect(mapState)(InboxBody);
+const mapDispatch = (Dispatch) => ({
+  openMail: (e) => Dispatch(readMail(e)),
+  closeMail: (e) => Dispatch(markAsRead(e)),
+  markAsUnread: (e) => Dispatch(unreadMail(e)),
+  deleteMail: (e) => Dispatch(removeMail(e)),
+  importantMail: (e) => Dispatch(importantMail(e)),
+  markCheckedAsRead: (e) => Dispatch(markSelectedAsRead(e)),
+  handleChange: (m, e) => Dispatch(handleChange(m, e)),
+  checkAll: (e) => Dispatch(handleCheckAll(e)),
+  deleteSelected: (v) => Dispatch(handleDeleteSelected(v)),
+  showReadMails: () => Dispatch(showReadMails()),
+  showAllMails: () => Dispatch(showAllMails()),
+  showUnreadMails: () => Dispatch(showUnreadMails()),
+});
+
+export default connect(mapState, mapDispatch)(InboxBody);

@@ -28,11 +28,11 @@
       "label": "Office",
       "spam": true,
       "sent": false,
-      "important": true,
+      "important": false,
       "attachment": null,
       "sentAt": "2020-08-06T04:40:22 -02:00",
-      "readAt": "2018-07-26T10:38:38 -02:00",
-      "deletedAt": null
+      "readAt": "2021-03-15T15:47:31.210Z",
+      "deletedAt": "2021-11-16T17:52:04.701Z"
     },
     {
       "id": 3,
@@ -99,7 +99,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-07-08T07:08:34 -02:00",
-      "readAt": "2019-10-15T05:21:43 -02:00",
+      "readAt": null,
       "deletedAt": null
     },
     {
@@ -575,7 +575,7 @@
       "important": true,
       "attachment": null,
       "sentAt": "2020-07-14T01:15:47 -02:00",
-      "readAt": "2019-08-10T04:45:29 -02:00",
+      "readAt": "2021-03-15T15:47:31.211Z",
       "deletedAt": null
     },
     {
@@ -1575,11 +1575,11 @@
       "label": "Design",
       "spam": false,
       "sent": false,
-      "important": true,
+      "important": false,
       "attachment": null,
       "sentAt": "2020-09-04T10:55:49 -02:00",
       "readAt": null,
-      "deletedAt": null
+      "deletedAt": "2021-11-16T17:50:57.866Z"
     },
     {
       "id": 94,
@@ -1818,23 +1818,6 @@
       "sentAt": "2017-08-15T01:06:01 -02:00",
       "readAt": null,
       "deletedAt": null
-    },
-    {
-      "id": 108,
-      "subject": "sunt proident deserunt",
-      "content": "Adipisicing ipsum ex ad esse pariatur cupidatat anim elit velit fugiat proident. Laborum eu nisi esse aliqua in incididunt sunt elit incididunt id do. Ex ea exercitation sint quis ullamco enim mollit exercitation id cupidatat aute nisi. Duis consequat Lorem sint proident eu nisi occaecat laboris. Amet incididunt pariatur sit deserunt et reprehenderit amet duis adipisicing est sunt. Tempor eiusmod laborum eiusmod reprehenderit cupidatat do laboris. Aliquip ad sit laborum culpa dolore nisi velit id proident dolor adipisicing.\r\nId voluptate amet consequat ut fugiat ut ut commodo sunt ea minim enim incididunt cillum. Anim magna exercitation excepteur in magna dolor incididunt aliqua velit sit deserunt. Commodo proident eu cupidatat sunt adipisicing enim nulla elit. Lorem nostrud adipisicing sit esse qui adipisicing id eu quis pariatur fugiat pariatur consectetur et.\r\nAd sunt incididunt mollit id qui cupidatat reprehenderit laboris labore est amet. Non esse labore id fugiat do deserunt. Irure fugiat culpa veniam velit tempor esse ex. Quis adipisicing magna non quis pariatur nulla. Esse tempor excepteur consequat eiusmod elit ut esse occaecat velit in anim commodo sunt anim. Ut et occaecat amet magna quis ullamco proident minim dolor labore in nulla voluptate cupidatat.\r\n",
-      "sender": {
-        "name": "Charmaine Holland",
-        "email": "charmaineholland@artworlds.com"
-      },
-      "label": "Work",
-      "spam": true,
-      "sent": false,
-      "important": true,
-      "attachment": null,
-      "sentAt": "2020-06-26T04:02:00 -02:00",
-      "readAt": null,
-      "deletedAt": "2017-06-08T07:55:27 -02:00"
     },
     {
       "id": 109,
@@ -2175,23 +2158,6 @@
       "sentAt": "2019-11-27T11:24:10 -01:00",
       "readAt": null,
       "deletedAt": null
-    },
-    {
-      "id": 129,
-      "subject": "veniam laborum ut",
-      "content": "Ea ea est culpa nostrud ut veniam qui enim. Do aliquip pariatur nisi nisi fugiat. Laboris voluptate aliqua elit Lorem exercitation occaecat.\r\nExercitation ipsum culpa adipisicing cillum cupidatat aute excepteur nostrud enim. Ea ex veniam esse excepteur ipsum do ea reprehenderit velit laborum. Laboris anim qui enim incididunt duis aliquip dolor aute consequat.\r\nNostrud dolor sunt amet nostrud dolore est commodo consequat culpa. Ex anim aliquip pariatur ut. Elit incididunt duis duis dolor aliqua. Excepteur officia veniam et mollit. Pariatur labore enim consectetur commodo ea mollit.\r\n",
-      "sender": {
-        "name": "Jane Best",
-        "email": "janebest@artworlds.com"
-      },
-      "label": "Design",
-      "spam": true,
-      "sent": false,
-      "important": true,
-      "attachment": "http://placehold.it/32x32",
-      "sentAt": "2020-08-27T07:23:37 -02:00",
-      "readAt": "2015-10-29T01:30:47 -01:00",
-      "deletedAt": "2015-11-01T02:45:57 -01:00"
     },
     {
       "id": 130,
@@ -5519,7 +5485,7 @@
       "label": "Office",
       "spam": true,
       "sent": false,
-      "important": false,
+      "important": true,
       "attachment": null,
       "sentAt": "2019-11-18T03:32:18 -01:00",
       "readAt": "2018-06-12T04:19:53 -02:00",
@@ -5944,10 +5910,10 @@
       "label": "Office",
       "spam": true,
       "sent": false,
-      "important": false,
+      "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-08-13T03:33:31 -02:00",
-      "readAt": "2016-06-05T02:43:33 -02:00",
+      "readAt": "2021-03-15T15:47:31.209Z",
       "deletedAt": null
     },
     {
@@ -6610,7 +6576,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-03-31T04:48:58 -02:00",
-      "readAt": null,
+      "readAt": "2021-03-15T15:37:37.315Z",
       "deletedAt": null
     },
     {
@@ -6882,7 +6848,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-04-11T08:18:03 -02:00",
-      "readAt": null,
+      "readAt": "2021-03-15T15:37:37.313Z",
       "deletedAt": null
     },
     {
@@ -7698,7 +7664,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-04-07T07:25:45 -02:00",
-      "readAt": null,
+      "readAt": "2021-03-15T15:37:37.314Z",
       "deletedAt": null
     },
     {
@@ -8106,8 +8072,8 @@
       "important": true,
       "attachment": null,
       "sentAt": "2020-08-24T12:06:11 -02:00",
-      "readAt": null,
-      "deletedAt": null
+      "readAt": "2021-03-15T15:47:31.209Z",
+      "deletedAt": "2021-11-16T17:02:50.134Z"
     },
     {
       "id": 478,
@@ -8684,7 +8650,7 @@
       "important": true,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-06-30T12:47:14 -02:00",
-      "readAt": null,
+      "readAt": "2021-03-15T15:45:33.441Z",
       "deletedAt": null
     },
     {
@@ -10044,8 +10010,8 @@
       "important": false,
       "attachment": "http://placehold.it/32x32",
       "sentAt": "2020-07-30T03:54:16 -02:00",
-      "readAt": null,
-      "deletedAt": null
+      "readAt": "2021-03-15T15:47:31.210Z",
+      "deletedAt": "2021-11-16T17:52:28.772Z"
     },
     {
       "id": 592,
@@ -10996,8 +10962,8 @@
       "important": true,
       "attachment": null,
       "sentAt": "2020-09-11T01:01:55 -02:00",
-      "readAt": null,
-      "deletedAt": null
+      "readAt": "2021-11-16T17:52:42.467Z",
+      "deletedAt": "2021-11-16T17:50:57.867Z"
     },
     {
       "id": 648,
@@ -11319,7 +11285,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-06-30T04:44:25 -02:00",
-      "readAt": null,
+      "readAt": "2021-11-16T16:21:16.463Z",
       "deletedAt": null
     },
     {
@@ -11846,7 +11812,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-03-26T03:21:01 -01:00",
-      "readAt": null,
+      "readAt": "2021-03-15T15:37:37.315Z",
       "deletedAt": null
     },
     {
@@ -12900,7 +12866,7 @@
       "important": false,
       "attachment": null,
       "sentAt": "2020-07-13T07:22:44 -02:00",
-      "readAt": "2015-12-20T10:26:04 -01:00",
+      "readAt": "2021-11-16T17:58:54.612Z",
       "deletedAt": null
     },
     {

@@ -28,8 +28,8 @@ const Profile = ({ profile, loading, error }) => {
   }
 };
 const mapState = (state) => ({
-  profile: state.getProfile.profile,
-  loading: state.getProfile.profileLoading,
-  error: state.getProfile.error,
+  profile: state.handleProfile.profile,
+  loading: state.handleProfile.profileLoading,
+  error: state.handleProfile.error,
 });
 export default connect(mapState)(Profile);
