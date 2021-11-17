@@ -30,11 +30,6 @@ const Compose = ({ modal, handleModal, handleSubmit }) => {
     setCompose({ ...compose, name: (compose.sender.name = e.target.value) });
   };
 
-  const sendMail = (e) => {
-    e.preventDefault();
-    delete compose.name;
-    handleSubmit(compose);
-  };
 
   return (
     <div className="inbox-body">
@@ -51,7 +46,7 @@ const Compose = ({ modal, handleModal, handleSubmit }) => {
               <h4 className="modal-title">Compose</h4>
             </div>
             <div className="modal-body">
-              <form className="form-horizontal" onSubmit={sendMail}>
+              <form className="form-horizontal" onSubmit={(e) => handleSubmit(compose,e)}>
                 <div className="form-group">
                   <label className="col-lg-2 control-label">To</label>
                   <div className="col-lg-10">
@@ -105,7 +100,9 @@ const mapState = (state) => ({
 
 const mapDispatch = (dispatch) => ({
   handleModal: (e) => dispatch(handleModal(e)),
-  handleSubmit: (e) => dispatch(handleSubmit(e)),
+  handleSubmit: (m,e) => {
+    e.preventDefault();
+    dispatch(handleSubmit(m))},
 });
 
 export default connect(mapState, mapDispatch)(Compose);
