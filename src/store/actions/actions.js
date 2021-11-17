@@ -35,7 +35,7 @@ export const X_MARK_CHECKED = 'X_MARK_CHECKED';
 export const HANDLE_CHECKBOX = 'HANDLE_CHECKBOX';
 export const HANDLE_CHECKALL = 'HANDLE_CHECKALL';
 
-export const SHOWEN_MAILS= 'SHOWEN_MAILS';
+export const SHOWEN_MAILS = 'SHOWEN_MAILS';
 
 //load Profile :
 export const loadProfile = () => {
@@ -80,8 +80,22 @@ export const setKeyword = (e) => {
 export const handleModal = (e) => {
   return { type: ON_SHOW_MODAL, payload: e };
 };
-export const handleSubmit = (e) => {
-  return { type: ON_SEND_MAIL, payload: e };
+export const handleSubmit = (m) => {
+  return (dispatch) =>
+    axios
+      .post('http://localhost:8080/mails', {
+        ...m,
+        sentAt: new Date(),
+        readAt: new Date(),
+        sent: true,
+      })
+      .then((res) => {
+        dispatch({ type: ON_SEND_MAIL, payload: res.data });
+      })
+      .then(window.location.reload())
+      .catch((error) => {
+        console.error(error);
+      });
 };
 //Read Mails :
 export const readMail = (e) => {
